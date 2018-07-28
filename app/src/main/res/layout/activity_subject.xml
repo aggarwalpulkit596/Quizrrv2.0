@@ -1,67 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SubjectActivity">
 
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="18dp"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Subject"
-        android:textSize="32sp" />
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@android:drawable/ic_dialog_alert" />
 
-    <ImageButton
-        android:id="@+id/searchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/backButton"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/titleTextView"
-        android:layout_marginEnd="18dp"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Subject"
+            android:textSize="32sp" />
 
-    <ImageButton
-        android:id="@+id/filterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/searchButton"
-        android:layout_alignStart="@+id/searchButton"
-        android:layout_below="@+id/searchButton"
-        android:layout_marginTop="4dp"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/backButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/titleTextView"
+            android:layout_marginEnd="18dp"
+            app:srcCompat="@android:drawable/ic_menu_search" />
 
-    <TextView
-        android:id="@+id/chaptersTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textSize="18sp"
-        android:text="31 Chapters" />
-    <TextView
-        android:id="@+id/quizzesTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/chaptersTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:textSize="18sp"
-        android:text="108 Quizzes" />
-</RelativeLayout>
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/searchButton"
+            android:layout_alignStart="@+id/searchButton"
+            android:layout_below="@+id/searchButton"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+        <TextView
+            android:id="@+id/chaptersTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="31 Chapters"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/quizzesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chaptersTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="108 Quizzes"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/aboutBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quizzesTextView"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/accuracytextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Accuracy"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/accuracyPercentagetextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accuracytextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="75%"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/quiztextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Quiz Taken"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/quizPercentagetextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/quiztextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="10"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/ranktextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Accuracy"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/rankPercentagetextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ranktextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="12k"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/continueCardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutBar"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:text="Continue Where you Left"
+            android:textSize="20sp" />
+
+        <include
+            android:id="@+id/continueCardLayout"
+            layout="@layout/livequizlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/continueCardTitle"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"/>
+
+        <TextView
+            android:id="@+id/chaptersRecyclerViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/continueCardLayout"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:text="Chapters"
+            android:textSize="30sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chaptersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chaptersRecyclerViewTitle"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/livequizlayout" />
+
+    </RelativeLayout>
+</ScrollView>
