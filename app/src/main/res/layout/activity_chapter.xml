@@ -27,11 +27,11 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="Subject"
+            android:text="Chapter"
             android:textSize="32sp" />
 
         <ImageButton
-            android:id="@+id/searchButton"
+            android:id="@+id/filterButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/backButton"
@@ -40,41 +40,21 @@
             android:layout_marginEnd="18dp"
             app:srcCompat="@android:drawable/ic_menu_search" />
 
-        <ImageButton
-            android:id="@+id/filterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/searchButton"
-            android:layout_alignStart="@+id/searchButton"
-            android:layout_below="@+id/searchButton"
-            android:layout_marginTop="4dp"
-            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
-
         <TextView
-            android:id="@+id/chaptersTextView"
+            android:id="@+id/completedTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleTextView"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="31 Chapters"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/quizzesTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/chaptersTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="108 Quizzes"
+            android:layout_marginTop="20dp"
+            android:text="Completed"
             android:textSize="18sp" />
 
         <LinearLayout
             android:id="@+id/aboutBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/quizzesTextView"
+            android:layout_below="@+id/completedTextView"
             android:layout_marginTop="10dp">
 
             <RelativeLayout
@@ -158,24 +138,24 @@
             android:layout_below="@id/aboutBar"
             android:layout_marginStart="36dp"
             android:layout_marginTop="20dp"
-            android:text="Continue Where you Left"
+            android:text="Recommendation"
             android:textSize="20sp" />
 
         <include
-            android:id="@+id/continueCardLayout"
+            android:id="@+id/recommendationCardLayout"
             layout="@layout/livequizlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/recommendationCardTitle"
+            android:layout_marginEnd="32dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"/>
+            android:layout_marginTop="10dp" />
 
         <TextView
-            android:id="@+id/chaptersRecyclerViewTitle"
+            android:id="@+id/practiceRecyclerViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/continueCardLayout"
+            android:layout_below="@id/recommendationCardLayout"
             android:layout_marginStart="36dp"
             android:layout_marginTop="20dp"
             android:text="Chapters"
@@ -183,15 +163,59 @@
 
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/chaptersRecyclerView"
+            android:id="@+id/practiceRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/chaptersRecyclerViewTitle"
+            android:layout_below="@+id/practiceRecyclerViewTitle"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-            tools:listitem="@layout/livequizlayout" />
+            tools:listitem="@layout/trendinglayout" />
+
+        <TextView
+            android:id="@+id/learnRecyclerViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/practiceRecyclerView"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:text="Chapters"
+            android:textSize="30sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/learnRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/learnRecyclerViewTitle"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/trendinglayout" />
+
+        <TextView
+            android:id="@+id/analyzeRecyclerViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/learnRecyclerView"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:text="Chapters"
+            android:textSize="30sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/analyzeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/analyzeRecyclerViewTitle"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/trendinglayout" />
 
     </RelativeLayout>
 </ScrollView>

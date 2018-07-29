@@ -36,7 +36,7 @@ public class SubjectActivity extends AppCompatActivity {
     TextView ranktextView;
     @BindView(R.id.rankPercentagetextView)
     TextView rankPercentagetextView;
-    @BindView(R.id.continueCardTitle)
+    @BindView(R.id.recommendationCardTitle)
     TextView continueCardTitle;
     @BindView(R.id.chaptersRecyclerViewTitle)
     TextView chaptersRecyclerViewTitle;
