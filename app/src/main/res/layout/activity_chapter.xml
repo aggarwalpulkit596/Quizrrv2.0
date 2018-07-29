@@ -158,7 +158,7 @@
             android:layout_below="@id/recommendationCardLayout"
             android:layout_marginStart="36dp"
             android:layout_marginTop="20dp"
-            android:text="Chapters"
+            android:text="Practice"
             android:textSize="30sp" />
 
 
@@ -180,7 +180,7 @@
             android:layout_below="@id/practiceRecyclerView"
             android:layout_marginStart="36dp"
             android:layout_marginTop="20dp"
-            android:text="Chapters"
+            android:text="Learn"
             android:textSize="30sp" />
 
 
@@ -202,7 +202,7 @@
             android:layout_below="@id/learnRecyclerView"
             android:layout_marginStart="36dp"
             android:layout_marginTop="20dp"
-            android:text="Chapters"
+            android:text="Analyze"
             android:textSize="30sp" />
 
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopicActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@android:drawable/ic_dialog_alert" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Topic Name"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/recommendationCardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="40dp"
+            android:text="Recommendation"
+            android:textSize="20sp" />
+
+        <include
+            android:id="@+id/recommendationCardLayout"
+            layout="@layout/livequizlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recommendationCardTitle"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/quizRecyclerViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recommendationCardLayout"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:text="Easy (10)"
+            android:textSize="30sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/quizRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quizRecyclerViewTitle"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:spanCount="2"
+            tools:itemCount="4"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            tools:listitem="@layout/trendinglayout" />
+
+    </RelativeLayout>
+</ScrollView>
