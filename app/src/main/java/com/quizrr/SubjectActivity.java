@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
@@ -74,7 +75,7 @@ public class SubjectActivity extends AppCompatActivity {
         subjectId = i.getStringExtra("subjectId");
         chapterAdapter = new ChapterAdapter(chapterList, getApplicationContext());
         chaptersRecyclerView.setHasFixedSize(true);
-        chaptersRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+        chaptersRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         chaptersRecyclerView.setAdapter(chapterAdapter);
         getSubject();
 

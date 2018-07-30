@@ -35,15 +35,15 @@ public class ChapterAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         final Chapter ch = chapterArrayList.get(position);
         holder.message.setText(ch.getName());
-        holder.name.setText(ch.getQuizes()+"");
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent subject = new Intent(mContext, SubjectActivity.class);
-//                subject.putExtra("subjectId", l.getId());
-//                mContext.startActivity(subject);
-//            }
-//        });
+        holder.name.setText(ch.getQuizes() + "");
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent subject = new Intent(mContext, ChapterActivity.class);
+                subject.putExtra("chapterId", ch.getId());
+                mContext.startActivity(subject);
+            }
+        });
 
     }
 
