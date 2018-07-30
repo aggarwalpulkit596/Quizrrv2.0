@@ -7,11 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder> {
+public class LearnAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     private ArrayList<Learn> learnArrayList;
     private Context mContext;
@@ -52,15 +51,4 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
         return learnArrayList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView message, name;
-
-        MyViewHolder(View view) {
-            super(view);
-            message = view.findViewById(R.id.textView);
-            name = view.findViewById(R.id.textView2);
-
-
-        }
-    }
 }
