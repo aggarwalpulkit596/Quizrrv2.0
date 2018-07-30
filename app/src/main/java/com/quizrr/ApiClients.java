@@ -22,7 +22,7 @@ public class ApiClients {
         if (retrofit == null) {
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl(PRODUCTION)
+                    .baseUrl(DEVELOPER)
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();

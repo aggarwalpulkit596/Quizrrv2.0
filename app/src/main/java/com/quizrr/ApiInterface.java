@@ -1,7 +1,13 @@
 package com.quizrr;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
+
 public interface ApiInterface {
-//    @POST("users/otpsend")
+    //    @POST("users/otpsend")
 //    @FormUrlEncoded
 //    Call<JsonObject> sendOtp(@Field("contact") String Number);
 //
@@ -44,8 +50,8 @@ public interface ApiInterface {
 //    @POST("users/changeprofile")
 //    Call<JsonObject> changeprofile(@Header("token") String token, @Part MultipartBody.Part image);
 //
-//    @GET("quiz/listofquiz")
-//    Call<List<PastQuizes>> pastquiz(@Header("token") String token);
+    @GET("users/learn")
+    Call<List<Learn>> learn(@Header("token") String token);
 //
 //    @GET("quiz/getfutureevnts")
 //    Call<List<Quiz>> futureevents(@Header("token") String token);
