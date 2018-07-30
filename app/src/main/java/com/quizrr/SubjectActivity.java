@@ -1,5 +1,6 @@
 package com.quizrr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -45,11 +46,26 @@ public class SubjectActivity extends AppCompatActivity {
     @BindView(R.id.continueCardLayout)
     CardView continueCardLayout;
 
+    String subjectId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject);
         ButterKnife.bind(this);
+        Intent i = getIntent();
+        subjectId = i.getStringExtra("subjectId");
+        init();
+        getSubject();
     }
+
+    private void getSubject() {
+    }
+
+    private void init() {
+        Intent i = getIntent();
+        subjectId = i.getStringExtra("subjectId");
+    }
+
 }
