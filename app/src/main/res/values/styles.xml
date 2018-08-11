@@ -15,7 +15,6 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:textColorPrimary">#323b43</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -23,10 +22,6 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="ThemeOverlay.AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">#323b43</item>
-
-    </style>
 
 
 </resources>

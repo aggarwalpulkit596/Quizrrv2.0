@@ -25,30 +25,10 @@
                 android:background="#fff">
 
 
-                <ImageButton
-                    android:id="@+id/notificationImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="16dp"
-                    app:srcCompat="@android:drawable/ic_dialog_alert" />
-
-                <ImageView
-                    android:id="@+id/logoImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="23dp"
-                    app:srcCompat="@android:drawable/dialog_holo_dark_frame" />
-
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/livequizRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/logoImageView"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="20dp"
@@ -119,8 +99,8 @@
         <LinearLayout
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
-            android:visibility="gone"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
             <Button
                 android:layout_width="0dp"

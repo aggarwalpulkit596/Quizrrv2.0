@@ -18,7 +18,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradient"
+        android:id="@+id/cardBackground"
         android:padding="20dp">
 
         <TextView

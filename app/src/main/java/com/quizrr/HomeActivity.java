@@ -12,8 +12,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -27,10 +25,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
-    @BindView(R.id.notificationImageView)
-    ImageButton notificationImageView;
-    @BindView(R.id.logoImageView)
-    ImageView logoImageView;
     @BindView(R.id.livequizRecyclerView)
     RecyclerView livequizRecyclerView;
 
@@ -68,14 +62,13 @@ public class HomeActivity extends AppCompatActivity {
                 if (Math.abs(verticalOffset) - appBarLayout.getTotalScrollRange() == 0) {
                     //  Collapsed
                     Log.i("TAG", "onOffsetChanged: " + "collapsed");
-                    getSupportActionBar().setDisplayShowTitleEnabled(true);
+//                    getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 
                 } else {
                     //Expanded
 
                     Log.i("TAG", "onOffsetChanged: " + "expanded");
-
 
 
                 }
