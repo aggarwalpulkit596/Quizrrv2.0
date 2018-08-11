@@ -1,9 +1,16 @@
 package com.quizrr;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -43,14 +50,42 @@ public class HomeActivity extends AppCompatActivity {
     TextView trendingRecyclerViewTitle;
     @BindView(R.id.trendingRecyclerView)
     RecyclerView trendingRecyclerView;
-
+    @BindView(R.id.app_bar)
+    AppBarLayout appBarLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 
+                if (Math.abs(verticalOffset) - appBarLayout.getTotalScrollRange() == 0) {
+                    //  Collapsed
+                    Log.i("TAG", "onOffsetChanged: " + "collapsed");
+                    getSupportActionBar().setDisplayShowTitleEnabled(true);
+
+
+                } else {
+                    //Expanded
+
+                    Log.i("TAG", "onOffsetChanged: " + "expanded");
+
+
+
+                }
+            }
+        });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.app_name, R.string.app_name);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
         init();
         getLearn();
     }
@@ -59,7 +94,7 @@ public class HomeActivity extends AppCompatActivity {
         //learn Layout
         learnAdapter = new LearnAdapter(learnList, getApplicationContext());
         learnRecyclerView.setHasFixedSize(true);
-        learnRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        learnRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         learnRecyclerView.setAdapter(learnAdapter);
 
     }
@@ -88,5 +123,13 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_options_menu, menu);
+        return true;
     }
 }

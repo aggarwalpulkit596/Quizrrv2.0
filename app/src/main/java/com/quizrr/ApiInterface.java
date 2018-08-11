@@ -3,10 +3,8 @@ package com.quizrr;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
-import retrofit2.http.Part;
 import retrofit2.http.Path;
 
 public interface ApiInterface {
@@ -58,6 +56,9 @@ public interface ApiInterface {
 
     @GET("subjects/details/{subjectId}")
     Call<Subject> subject(@Header("token") String token, @Path("subjectId") String subjectId);
+
+    @GET("chapters/details/{chapterId}")
+    Call<Chapter> chapter(@Header("token") String token, @Path("chapterId") String chapterId);
 //
 //    @GET("quiz/getfutureevnts")
 //    Call<List<Quiz>> futureevents(@Header("token") String token);

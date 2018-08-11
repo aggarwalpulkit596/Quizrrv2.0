@@ -1,151 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <ScrollView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomBar"
-        android:fillViewport="true"
-        tools:context=".HomeActivity">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fff">
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomBar"
+            android:fillViewport="true"
+            tools:context=".HomeActivity">
 
-
-            <ImageButton
-                android:id="@+id/notificationImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
-                app:srcCompat="@android:drawable/ic_dialog_alert" />
-
-            <ImageView
-                android:id="@+id/logoImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="23dp"
-                app:srcCompat="@android:drawable/dialog_holo_dark_frame" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/livequizRecyclerView"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/logoImageView"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                tools:listitem="@layout/livequizlayout" />
+                android:background="#fff">
 
-            <RelativeLayout
-                android:id="@+id/learnLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/livequizRecyclerView"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp">
 
-                <TextView
-                    android:id="@+id/learnRecyclerViewTitle"
+                <ImageButton
+                    android:id="@+id/notificationImageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Learn"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    app:srcCompat="@android:drawable/ic_dialog_alert" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/learnRecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/learnRecyclerViewTitle"
-                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
-                    tools:itemCount="6"
-                    tools:listitem="@layout/trendinglayout"
-                    tools:spanCount="2" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/trendingLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/learnLayout"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/trendingRecyclerViewTitle"
+                <ImageView
+                    android:id="@+id/logoImageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Trending"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="23dp"
+                    app:srcCompat="@android:drawable/dialog_holo_dark_frame" />
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/trendingRecyclerView"
+                    android:id="@+id/livequizRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/trendingRecyclerViewTitle"
+                    android:layout_below="@+id/logoImageView"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                    tools:listitem="@layout/trendinglayout" />
+                    tools:listitem="@layout/livequizlayout" />
+
+                <RelativeLayout
+                    android:id="@+id/learnLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/livequizRecyclerView"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/learnRecyclerViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Learn"
+                        android:textColor="#000"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/learnRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/learnRecyclerViewTitle"
+                        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/trendinglayout"
+                        tools:spanCount="2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/trendingLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/learnLayout"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/trendingRecyclerViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trending"
+                        android:textColor="#000"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/trendingRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/trendingRecyclerViewTitle"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        tools:listitem="@layout/trendinglayout" />
+                </RelativeLayout>
+
             </RelativeLayout>
+        </ScrollView>
 
-        </RelativeLayout>
-    </ScrollView>
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:text="Home"
+                android:textSize="13sp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#d3d3d3"
-            android:text="Home"
-            android:textSize="13sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:text="Live Quiz"
+                android:textSize="13sp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#d3d3d3"
-            android:text="Live Quiz"
-            android:textSize="13sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:text="BookMark"
+                android:textSize="13sp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#d3d3d3"
-            android:text="BookMark"
-            android:textSize="13sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:text="Profile"
+                android:textSize="13sp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#d3d3d3"
-            android:text="Profile"
-            android:textSize="13sp" />
-
-    </LinearLayout>
-</RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
