@@ -11,6 +11,7 @@
     android:layout_marginBottom="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginStart="16dp"
+    android:id="@+id/cardBackground"
     android:layout_marginTop="16dp"
     app:cardCornerRadius="20dp"
     card_view:cardBackgroundColor="#33000000">
@@ -18,7 +19,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cardBackground"
         android:padding="20dp">
 
         <TextView
