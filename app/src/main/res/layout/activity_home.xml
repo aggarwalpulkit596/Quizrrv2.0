@@ -25,22 +25,19 @@
                 android:background="#fff">
 
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/livequizRecyclerView"
+                <carbon.widget.ViewPager
+                    android:id="@+id/homeviewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                    tools:listitem="@layout/livequizlayout" />
+                    android:layout_marginTop="20dp" />
 
                 <RelativeLayout
                     android:id="@+id/learnLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/livequizRecyclerView"
+                    android:layout_below="@+id/homeviewPager"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="20dp">
@@ -49,12 +46,13 @@
                         android:id="@+id/learnRecyclerViewTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotobold"
                         android:text="Learn"
                         android:textColor="#000"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
-                    <android.support.v7.widget.RecyclerView
+                    <carbon.widget.RecyclerView
                         android:id="@+id/learnRecyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

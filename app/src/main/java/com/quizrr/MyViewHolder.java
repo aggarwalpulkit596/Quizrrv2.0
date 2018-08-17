@@ -5,9 +5,11 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import carbon.widget.FrameLayout;
+
 public class MyViewHolder extends RecyclerView.ViewHolder {
     public TextView message, name;
-    public RelativeLayout cardBackground;
+    public FrameLayout cardBackground;
 
     MyViewHolder(View view) {
         super(view);

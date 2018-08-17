@@ -2,6 +2,7 @@ package com.quizrr;
 
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,15 +26,13 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
-    @BindView(R.id.livequizRecyclerView)
-    RecyclerView livequizRecyclerView;
 
     @BindView(R.id.learnLayout)
     RelativeLayout learnLayout;
     @BindView(R.id.learnRecyclerViewTitle)
     TextView learnRecyclerViewTitle;
     @BindView(R.id.learnRecyclerView)
-    RecyclerView learnRecyclerView;
+    carbon.widget.RecyclerView learnRecyclerView;
     private ArrayList<Learn> learnList = new ArrayList<>();
     LearnAdapter learnAdapter;
 
@@ -46,6 +45,8 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView trendingRecyclerView;
     @BindView(R.id.app_bar)
     AppBarLayout appBarLayout;
+    private ViewPager myViewPager;
+    private List<String> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,23 +56,27 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+        data = new ArrayList<>();
+        data.add("A");
+        data.add("B");
+        data.add("C");
 
-                if (Math.abs(verticalOffset) - appBarLayout.getTotalScrollRange() == 0) {
-                    //  Collapsed
-                    Log.i("TAG", "onOffsetChanged: " + "collapsed");
+        myViewPager = findViewById(R.id.homeviewPager);
+        myViewPager.setAdapter(new MyViewPagerAdapter(this, data));
+        appBarLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> {
+
+            if (Math.abs(verticalOffset) - appBarLayout.getTotalScrollRange() == 0) {
+                //  Collapsed
+                Log.i("TAG", "onOffsetChanged: " + "collapsed");
 //                    getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 
-                } else {
-                    //Expanded
+            } else {
+                //Expanded
 
-                    Log.i("TAG", "onOffsetChanged: " + "expanded");
+                Log.i("TAG", "onOffsetChanged: " + "expanded");
 
 
-                }
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
