@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:carbon_cornerRadius="6dp"
+    app:carbon_elevation="10dp"
+    app:carbon_elevationShadowColor="#000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:fontFamily="@font/robotomedium"
+            android:text="Measurements and Errors"
+            android:textColor="#323b43"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="10 Topics"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/robotomedium"
+            android:layout_alignStart="@id/textView"
+            android:layout_below="@+id/textView"
+            android:textColor="#a1a9b3" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:text="\u25CF 10 Topics"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/robotomedium"
+            android:layout_toEndOf="@id/textView2"
+            android:layout_below="@+id/textView"
+            android:textColor="#a1a9b3" />
+        
+        <carbon.widget.Button
+            android:text="start"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</carbon.widget.FrameLayout>

@@ -70,86 +70,13 @@
             android:text="108 Quizzes"
             android:textSize="18sp" />
 
-        <LinearLayout
+        <include
             android:id="@+id/aboutBar"
+            layout="@layout/performance_component"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quizzesTextView"
-            android:layout_marginTop="10dp">
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/accuracytextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Accuracy"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/accuracyPercentagetextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/accuracytextView"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="4dp"
-                    android:text="75%"
-                    android:textSize="20sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/quiztextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Quiz Taken"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/quizPercentagetextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/quiztextView"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="4dp"
-                    android:text="10"
-                    android:textSize="20sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/ranktextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Accuracy"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/rankPercentagetextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/ranktextView"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="4dp"
-                    android:text="12k"
-                    android:textSize="20sp" />
-            </RelativeLayout>
-
-        </LinearLayout>
+            android:layout_margin="16dp" />
 
         <TextView
             android:id="@+id/recommendationCardTitle"
@@ -157,19 +84,19 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutBar"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:text="Continue Where you Left"
             android:textSize="20sp" />
 
         <include
             android:id="@+id/continueCardLayout"
-            layout="@layout/livequizlayout"
+            layout="@layout/chapter_single_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/recommendationCardTitle"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"/>
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:id="@+id/chaptersRecyclerViewTitle"
@@ -191,7 +118,7 @@
             android:layout_marginStart="16dp"
             android:orientation="vertical"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-            tools:listitem="@layout/livequizlayout" />
+            tools:listitem="@layout/chapter_single_item" />
 
     </RelativeLayout>
 </ScrollView>
