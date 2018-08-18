@@ -21,18 +21,18 @@ import retrofit2.Response;
 
 public class SubjectActivity extends AppCompatActivity {
 
-    @BindView(R.id.backButton)
-    ImageButton backButton;
-    @BindView(R.id.filterButton)
-    ImageButton filterButton;
-    @BindView(R.id.searchButton)
-    ImageButton searchButton;
-    @BindView(R.id.titleTextView)
-    TextView titleTextView;
-    @BindView(R.id.chaptersTextView)
-    TextView chaptersTextView;
-    @BindView(R.id.quizzesTextView)
-    TextView quizzesTextView;
+//    @BindView(R.id.backButton)
+//    ImageButton backButton;
+//    @BindView(R.id.filterButton)
+//    ImageButton filterButton;
+//    @BindView(R.id.searchButton)
+//    ImageButton searchButton;
+//    @BindView(R.id.titleTextView)
+//    TextView titleTextView;
+//    @BindView(R.id.chaptersTextView)
+//    TextView chaptersTextView;
+//    @BindView(R.id.quizzesTextView)
+//    TextView quizzesTextView;
     @BindView(R.id.accuracytextView)
     TextView accuracytextView;
     @BindView(R.id.accuracyPercentagetextView)
@@ -95,8 +95,8 @@ public class SubjectActivity extends AppCompatActivity {
                     if (chapterList.size() == 0) {
                         chaptersRecyclerViewTitle.setVisibility(View.GONE);
                     }
-                    titleTextView.setText(subject.getName());
-                    chaptersTextView.setText(subject.getChapterCount()+" Chapters");
+//                    titleTextView.setText(subject.getName());
+//                    chaptersTextView.setText(subject.getChapterCount()+" Chapters");
                 }
 
             }

@@ -10,66 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            app:srcCompat="@android:drawable/ic_dialog_alert" />
-
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Subject"
-            android:textSize="32sp" />
-
-        <ImageButton
-            android:id="@+id/searchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/backButton"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/titleTextView"
-            android:layout_marginEnd="18dp"
-            app:srcCompat="@android:drawable/ic_menu_search" />
-
-        <ImageButton
-            android:id="@+id/filterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/searchButton"
-            android:layout_alignStart="@+id/searchButton"
-            android:layout_below="@+id/searchButton"
-            android:layout_marginTop="4dp"
-            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
-
-        <TextView
-            android:id="@+id/chaptersTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/titleTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="31 Chapters"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/quizzesTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/chaptersTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="108 Quizzes"
-            android:textSize="18sp" />
-
         <include
             android:id="@+id/aboutBar"
             layout="@layout/performance_component"
