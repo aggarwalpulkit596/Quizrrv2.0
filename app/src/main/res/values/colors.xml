@@ -7,4 +7,27 @@
     <color name="colorWhite">#fff</color>
     <color name="color1">#ffa885</color>
     <color name="color2">#ff758c</color>
+    <color name="charcoalgrey">#323b43</color>
+    <color name="slategrey">#59626a</color>
+    <color name="coolgrey">#a1a9b3</color>
+    <color name="cloudyblue">#ced7df</color>
+    <color name="palegrey">#eff3f6</color>
+    <color name="palegreytwo">#f4f7f9</color>
+    <color name="bluepurple">#5125c2</color>
+    <color name="easterpurple">#c075ff</color>
+    <color name="carnation">#ff758c</color>
+    <color name="peach">#ffa885</color>
+    <color name="periwinkle">#7181ff</color>
+    <color name="pastelpurple">#c0afff</color>
+    <color name="darkskyblue">#4c9ae8</color>
+    <color name="brightcyan">#4cceff</color>
+    <color name="nastygreen">#75a842</color>
+    <color name="sickgreen">#a9d545</color>
+    <color name="lightindigo">#8360d5</color>
+    <color name="pastelpurpletwo">#d098ff</color>
+    <color name="error">#ee4f4f</color>
+    <color name="warning">#ffb130</color>
+    <color name="success">#76b852</color>
+
+
 </resources>

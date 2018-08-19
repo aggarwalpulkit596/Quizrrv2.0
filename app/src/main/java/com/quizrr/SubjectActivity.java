@@ -7,6 +7,8 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -48,8 +50,8 @@ public class SubjectActivity extends AppCompatActivity implements AppBarLayout.O
 //    TextView continueCardTitle;
 //    @BindView(R.id.chaptersRecyclerViewTitle)
 //    TextView chaptersRecyclerViewTitle;
-//    @BindView(R.id.chaptersRecyclerView)
-//    RecyclerView chaptersRecyclerView;
+    @BindView(R.id.chaptersRecyclerView)
+RecyclerView chaptersRecyclerView;
 //    @BindView(R.id.continueCardLayout)
 //    CardView continueCardLayout;
 
@@ -92,9 +94,9 @@ public class SubjectActivity extends AppCompatActivity implements AppBarLayout.O
         AppBarLayout appbar = findViewById(R.id.app_bar);
 
         appbar.addOnOffsetChangedListener(this);
-//        chaptersRecyclerView.setHasFixedSize(true);
-//        chaptersRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-//        chaptersRecyclerView.setAdapter(chapterAdapter);
+        chaptersRecyclerView.setHasFixedSize(true);
+        chaptersRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        chaptersRecyclerView.setAdapter(chapterAdapter);
         getSubject();
 
     }
