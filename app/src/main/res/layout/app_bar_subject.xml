@@ -17,7 +17,6 @@
             android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/toolbar_background"
             android:fitsSystemWindows="true"
             app:collapsedTitleGravity="center"
             app:contentScrim="?attr/colorPrimary"
@@ -41,8 +40,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/activity_subject"
-        />
+    <include layout="@layout/activity_subject" />
 
     <include
         android:id="@+id/aboutBar"
