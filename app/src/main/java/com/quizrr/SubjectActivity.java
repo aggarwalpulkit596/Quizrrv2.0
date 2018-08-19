@@ -9,6 +9,7 @@ import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import retrofit2.Response;
 public class SubjectActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
 
 
-//    @BindView(R.id.backButton)
+    //    @BindView(R.id.backButton)
 //    ImageButton backButton;
 //    @BindView(R.id.filterButton)
 //    ImageButton filterButton;
@@ -51,11 +52,11 @@ public class SubjectActivity extends AppCompatActivity implements AppBarLayout.O
 //    @BindView(R.id.chaptersRecyclerViewTitle)
 //    TextView chaptersRecyclerViewTitle;
     @BindView(R.id.chaptersRecyclerView)
-RecyclerView chaptersRecyclerView;
+    RecyclerView chaptersRecyclerView;
 //    @BindView(R.id.continueCardLayout)
 //    CardView continueCardLayout;
 
-    String subjectId;
+    String subjectId, subjectName;
     private ArrayList<Chapter> chapterList = new ArrayList<>();
     ChapterAdapter chapterAdapter;
 
@@ -72,15 +73,36 @@ RecyclerView chaptersRecyclerView;
         setContentView(R.layout.app_bar_subject);
         ButterKnife.bind(this);
         Intent i = getIntent();
+
+        //Back Button
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         subjectId = i.getStringExtra("subjectId");
+        subjectName = i.getStringExtra("name");
         GradientDrawable gradientDrawable;
-        if (0 == 0) {
+        if (subjectName.equalsIgnoreCase("Physics")) {
             gradientDrawable = new GradientDrawable(
                     GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
                     new int[]{0xFFffa885, 0xFFff758c}); //set the color of gradient
-            gradientDrawable.setCornerRadius(6f); //set corner radius
-            collapsingToolbarLayout.setBackground(gradientDrawable);
+        } else if (subjectName.equalsIgnoreCase("Math")) {
+            gradientDrawable = new GradientDrawable(
+                    GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
+                    new int[]{0xFFc0afff, 0xFF7181ff}); //set the color of gradient
+
+        } else if (subjectName.equalsIgnoreCase("Chemistry")) {
+            gradientDrawable = new GradientDrawable(
+                    GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
+                    new int[]{0xFF4cceff, 0xFF4c9ae8}); //set the color of gradient
+        } else {
+            gradientDrawable = new GradientDrawable(
+                    GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
+                    new int[]{0xFFffa885, 0xFFff758c}); //set the color of gradient
         }
+        gradientDrawable.setCornerRadius(6f); //set corner radius
+        collapsingToolbarLayout.setBackground(gradientDrawable);
         init();
     }
 

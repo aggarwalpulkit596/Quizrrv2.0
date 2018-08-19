@@ -37,43 +37,37 @@ public class LearnAdapter extends RecyclerView.Adapter<MyViewHolder> {
             gradientDrawable = new GradientDrawable(
                     GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
                     new int[]{0xFFffa885, 0xFFff758c}); //set the color of gradient
-            gradientDrawable.setCornerRadius(6f); //set corner radius
             holder.cardBackground.setElevationShadowColor(0x66ff758c);
         } else if (position == 1) {
             gradientDrawable = new GradientDrawable(
                     GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
                     new int[]{0xFFc0afff, 0xFF7181ff}); //set the color of gradient
-            gradientDrawable.setCornerRadius(6f); //set corner radius
             holder.cardBackground.setElevationShadowColor(0x667181ff);
 
         } else if (position == 2) {
             gradientDrawable = new GradientDrawable(
                     GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
                     new int[]{0xFF4cceff, 0xFF4c9ae8}); //set the color of gradient
-            gradientDrawable.setCornerRadius(6f); //set corner radius
             holder.cardBackground.setElevationShadowColor(0x664c9ae8);
 
         } else {
             gradientDrawable = new GradientDrawable(
                     GradientDrawable.Orientation.BOTTOM_TOP, //set a gradient direction
                     new int[]{0xFFffa885, 0xFFff758c}); //set the color of gradient
-            gradientDrawable.setCornerRadius(6f); //set corner radius
             holder.cardBackground.setElevationShadowColor(0);
 
         }
-
+        gradientDrawable.setCornerRadius(6f); //set corner radius
         final Learn l = learnArrayList.get(position);
         holder.cardBackground.setBackground(gradientDrawable);
         holder.cardBackground.setElevationShadowColor(0);
         holder.message.setText(l.getName());
         holder.name.setText(l.getChapters().size() + "");
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent subject = new Intent(mContext, SubjectActivity.class);
-                subject.putExtra("subjectId", l.getId());
-                mContext.startActivity(subject);
-            }
+        holder.itemView.setOnClickListener(v -> {
+            Intent subject = new Intent(mContext, SubjectActivity.class);
+            subject.putExtra("subjectId", l.getId());
+            subject.putExtra("name", l.getName());
+            mContext.startActivity(subject);
         });
 
     }

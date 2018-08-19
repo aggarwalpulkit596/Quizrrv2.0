@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="50dp"
     android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <RelativeLayout
@@ -19,7 +19,8 @@
             android:layout_marginStart="36dp"
             android:layout_marginTop="5dp"
             android:text="Continue Where you Left"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone" />
 
         <include
             android:id="@+id/continueCardLayout"
@@ -29,17 +30,22 @@
             android:layout_below="@+id/recommendationCardTitle"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/chaptersRecyclerViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/continueCardLayout"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotobold"
             android:text="Chapters"
-            android:textSize="30sp" />
+            android:textColor="@color/charcoalgrey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Chapters" />
 
 
         <android.support.v7.widget.RecyclerView

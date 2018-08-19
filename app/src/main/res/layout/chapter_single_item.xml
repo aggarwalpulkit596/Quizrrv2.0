@@ -7,6 +7,7 @@
     android:layout_margin="8dp"
     app:carbon_cornerRadius="6dp"
     app:carbon_elevation="10dp"
+    android:background="#26323b43"
     app:carbon_elevationShadowColor="#000">
 
     <RelativeLayout
@@ -50,6 +51,14 @@
         
         <carbon.widget.Button
             android:text="start"
+            android:id="@+id/chapterBtn"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#fff"
+            android:minHeight="0dp"
+            app:carbon_cornerRadius="23dp"
             android:layout_width="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"

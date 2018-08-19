@@ -71,7 +71,8 @@
                     android:layout_below="@+id/learnLayout"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/trendingRecyclerViewTitle"
@@ -90,10 +91,38 @@
                         android:layout_below="@id/trendingRecyclerViewTitle"
                         android:orientation="vertical"
                         app:layoutManager="android.support.v7.widget.GridLayoutManager"
-                        tools:spanCount="2"
-                        tools:listitem="@layout/trendinglayout" />
+                        tools:listitem="@layout/trendinglayout"
+                        tools:spanCount="2" />
                 </RelativeLayout>
-                <include layout="@layout/component_livequiz"></include>
+
+                <RelativeLayout
+                    android:id="@+id/livequizlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/trendingLayout"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/livequiztitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotobold"
+                        android:text="Live Quiz"
+                        android:textColor="@color/charcoalgrey"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <include
+                        layout="@layout/component_livequiz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/livequiztitle"
+                        android:layout_marginTop="13dp" />
+                </RelativeLayout>
+
 
             </RelativeLayout>
         </ScrollView>

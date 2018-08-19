@@ -42,7 +42,7 @@
             android:textSize="16sp"
             android:textStyle="normal" />
 
-        <carbon.widget.Button
+        <carbon.widget.TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/card_live_quiztitle"
@@ -50,14 +50,14 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/card_livequiz_cashtitle"
-            android:background="#f64a9c"
-            android:minHeight="0dp"
+            android:background="#90f64a9c"
             android:paddingBottom="5dp"
-            android:paddingEnd="12dp"
-            android:paddingStart="12dp"
+            android:paddingEnd="22dp"
+            android:paddingStart="22dp"
+            android:textSize="14sp"
             android:paddingTop="5dp"
             android:text="Tonight,9 PM"
             android:textColor="#fff"
-            app:carbon_cornerRadius="11dp" />
+            app:carbon_cornerRadius="20dp" />
     </RelativeLayout>
 </carbon.widget.FrameLayout>
