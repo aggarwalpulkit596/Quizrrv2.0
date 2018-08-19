@@ -8,7 +8,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
+        android:layout_height="236dp"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -21,70 +21,13 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleGravity="center"
             app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/toolbarmessage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/robotomedium"
-                    android:text="Good Evening"
-                    android:textColor="#80ffffff"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/toolbarusername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/toolbarmessage"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/robotomedium"
-                    android:text="John"
-                    android:textColor="#fff"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/toolbarmessage2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignTop="@id/toolbarmessage"
-                    android:layout_marginEnd="52dp"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/robotomedium"
-                    android:text="Daily Target"
-                    android:textColor="#80ffffff"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/toolbariteminfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@id/toolbarmessage2"
-                    android:layout_below="@id/toolbarmessage2"
-                    android:fontFamily="@font/robotobold"
-                    android:text="2/5"
-                    android:textColor="#ffffff"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/toolbariteminfo2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/toolbariteminfo"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_toRightOf="@id/toolbariteminfo"
-                    android:fontFamily="@font/robotomedium"
-                    android:text="quizzes"
-                    android:textColor="#80ffffff"
-                    android:textSize="12sp" />
             </RelativeLayout>
 
             <android.support.v7.widget.Toolbar
@@ -98,7 +41,17 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/activity_subject" />
+    <include layout="@layout/activity_subject"
+        />
+
+    <include
+        android:id="@+id/aboutBar"
+        layout="@layout/performance_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|center|end" />
 
 
 </android.support.design.widget.CoordinatorLayout>

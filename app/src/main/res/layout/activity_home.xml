@@ -15,7 +15,6 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/bottomBar"
             android:fillViewport="true"
             tools:context=".HomeActivity">
 
@@ -94,44 +93,5 @@
             </RelativeLayout>
         </ScrollView>
 
-        <LinearLayout
-            android:id="@+id/bottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:text="Home"
-                android:textSize="13sp" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:text="Live Quiz"
-                android:textSize="13sp" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:text="Bookmark"
-                android:textSize="13sp" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:text="Profile"
-                android:textSize="13sp" />
-
-        </LinearLayout>
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
