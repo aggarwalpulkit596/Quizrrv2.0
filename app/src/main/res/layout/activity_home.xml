@@ -93,6 +93,7 @@
                         tools:spanCount="2"
                         tools:listitem="@layout/trendinglayout" />
                 </RelativeLayout>
+                <include layout="@layout/component_livequiz"></include>
 
             </RelativeLayout>
         </ScrollView>
